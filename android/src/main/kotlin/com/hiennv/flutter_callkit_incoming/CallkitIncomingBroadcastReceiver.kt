@@ -146,6 +146,13 @@ class CallkitIncomingBroadcastReceiver : BroadcastReceiver() {
                     Log.e(TAG, null, error)
                 }
             }
+            "${context.packageName}.${CallkitConstants.ACTION_BACKGROUND_CALLBACK}" -> {
+                try {
+                    sendEventFlutter(CallkitConstants.ACTION_BACKGROUND_CALLBACK, data)
+                } catch (error: Exception) {
+                    Log.e(TAG, null, error)
+                }
+            }
         }
     }
 

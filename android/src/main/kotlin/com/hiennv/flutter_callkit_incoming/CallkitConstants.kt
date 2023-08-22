@@ -18,6 +18,8 @@ object CallkitConstants {
             "com.hiennv.flutter_callkit_incoming.ACTION_CALL_TIMEOUT"
     const val ACTION_CALL_CALLBACK =
             "com.hiennv.flutter_callkit_incoming.ACTION_CALL_CALLBACK"
+    const val ACTION_BACKGROUND_CALLBACK =
+        "com.hiennv.flutter_callkit_incoming.ACTION_BACKGROUND_CALLBACK"
     const val ACTION_CALL_CUSTOM =
             "com.hiennv.flutter_callkit_incoming.ACTION_CALL_CUSTOM"
 

@@ -460,8 +460,13 @@ class CallkitNotificationManager(private val context: Context) {
     }
 
     private fun getActivityPendingIntent(id: Int, data: Bundle): PendingIntent {
-        val intent = CallkitIncomingActivity.getIntent(context, data)
-        return PendingIntent.getActivity(context, id, intent, getFlagPendingIntent())
+        // val intent = CallkitIncomingActivity.getIntent(context, data)
+        val intentTransparent = TransparentActivity.getIntent(
+            context,
+            CallkitConstants.ACTION_BACKGROUND_CALLBACK,
+            data
+        )
+        return PendingIntent.getActivity(context, id, intentTransparent, getFlagPendingIntent())
     }
 
     private fun getAppPendingIntent(id: Int, data: Bundle): PendingIntent {
